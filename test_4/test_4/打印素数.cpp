@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+//写代码，实现打印100~200间的素数
+int main()
+{
+	int i = 0;
+	for (i = 101;i <= 200;i+=2)
+	{
+		int j = 0;
+		for (j = 3;j <= i / 2;j += 2)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+			if (i % j != 0 && j == i / 2)
+			{
+				printf("%d ", i);
+			}
+		}
+
+	}
+	return 0;
+}
