@@ -35,6 +35,7 @@ void printboard(char board[ROWS][COLS], int rows, int cols)
 
 void setmine(char board[ROWS][COLS], int rows, int cols)
 {
+	srand((unsigned int)time(NULL));
 	int count = COUNT;//布置雷的个数
 	while (count)
 	{

@@ -31,7 +31,6 @@ void game()//游戏函数
 int main()
 {
 	int choice = 0;
-	srand((unsigned int)time(NULL));
 	do
 	{
 		menu();//游戏菜单打印
