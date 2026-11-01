@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+//int strlen(int*arr)//顺便看看我这个函数有什么问题
+//{
+//	int count = 0;
+//	while (*arr != '\0')
+//	{
+//		arr++;
+//		count++;
+//	}
+//	return count;
+//}
+void find_twosingle(int*arr,int length)
+{
+	int n = 0;
+	for (int i = 0;i < length;i++)
+	{
+		n ^= arr[i];
+	}
+	printf("%d\n", n);
+}
+int main()
+{
+	int arr[10] = { 1,2,3,4,5,1,2,3,4,6 };
+	int length = sizeof(arr) / sizeof(arr[0]);
+	find_twosingle(arr,length);
+	return 0;
+}
