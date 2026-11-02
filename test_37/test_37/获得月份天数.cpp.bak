@@ -1,0 +1,53 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int numsofdays(int years, int months)
+{
+	if ((years % 400 == 0) || ((years % 4 == 0) && years % 100 != 0))
+	{
+		if (months == 2)
+			return 29;
+		else if (months <= 7)
+		{
+			if (months % 2 == 0)
+				return 30;
+			else
+				return 31;
+		}
+		else
+		{
+			if (months % 2 == 0)
+				return 31;
+			else
+				return 30;
+		}
+	}
+	else
+	{
+		if (months == 2)
+			return 28;
+		else if (months <= 7)
+		{
+			if (months % 2 == 0)
+				return 30;
+			else
+				return 31;
+		}
+		else
+		{
+			if (months % 2 == 0)
+				return 31;
+			else
+				return 30;
+		}
+	}
+}
+int main()
+{
+	int years = 0;
+	int months = 0;
+	scanf("%d %d", &years, &months);
+	int result=numsofdays(years, months);
+	printf("%d\n", result);
+	return 0;
+}
